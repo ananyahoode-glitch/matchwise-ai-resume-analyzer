@@ -2,7 +2,6 @@
 
 A privacy-first, explainable resume-to-job matching app. Matchwise helps job seekers understand alignment with a role; it is **not** an automated hiring system or an ATS score.
 
-![Matchwise dashboard](screenshots/dashboard-placeholder.svg)
 
 ## Features
 
@@ -50,10 +49,4 @@ matchwise/
 └── requirements.txt       # Optional format parsers
 ```
 
-## Privacy and fairness
 
-Files are processed in memory and are never saved. The matching engine does not use photos, names, age, gender, religion, caste, ethnicity, disability, or other sensitive traits. Do not upload sensitive documents to a public deployment without adding appropriate security, retention, and consent controls.
-
-## GitHub-ready next steps
-
-Add a real screenshot after running the app, deploy behind HTTPS, and configure request-size limits and rate limiting before public use.
