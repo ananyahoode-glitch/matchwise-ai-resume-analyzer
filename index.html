@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explainable resume and job alignment analysis." />
+    <title>Matchwise | Resume intelligence, clearly explained</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav><a class="brand" href="/">match<span>wise</span></a><p><i></i> Private by design</p></nav>
+      <section class="hero"><div class="eyebrow">RESUME INTELLIGENCE</div><h1>Find the signal.<br /><em>Own the story.</em></h1><p>See how your experience aligns with a role - with a transparent score, real skill gaps, and recommendations grounded in your resume.</p></section>
+      <section class="workspace" aria-label="Resume analysis form">
+        <div class="input-card"><div class="card-title"><span class="step">01</span><div><h2>Your resume</h2><p>Paste your content or upload a file.</p></div></div><label class="upload" for="file"><input id="file" type="file" accept=".pdf,.docx,.txt" /><span>＋ Upload PDF, DOCX, or TXT</span><small>Processed locally, never stored</small></label><textarea id="resume" placeholder="Paste your resume here…"></textarea><span id="file-name" class="file-name"></span></div>
+        <div class="input-card"><div class="card-title"><span class="step">02</span><div><h2>Target role</h2><p>Paste the complete job description.</p></div></div><textarea id="job" class="job" placeholder="Paste the job description here…"></textarea><div class="hint">Tip: Include responsibilities and requirements for a sharper read.</div></div>
+      </section>
+      <div class="action-row"><p>Your information is analyzed in memory and never stored.</p><button id="analyze">Analyze alignment <span>→</span></button></div>
+      <p id="error" class="error" role="alert"></p>
+      <section id="results" class="results hidden" aria-live="polite"></section>
+      <section class="note"><strong>A useful estimate, not a verdict.</strong> Matchwise is decision support for your job search - never a hiring prediction or official ATS score.</section>
+    </main>
+    <template id="result-template"><div class="result-head"><div><div class="eyebrow">YOUR ALIGNMENT REPORT</div><h2>Here’s what stands out.</h2></div><div class="score"><b id="score"></b><span>match score</span></div></div><div class="metrics"><div><span>Text relevance</span><b id="relevance"></b><i><u id="relevance-bar"></u></i></div><div><span>Skill coverage</span><b id="coverage"></b><i><u id="coverage-bar"></u></i></div><div><span>Resume readiness</span><b id="quality"></b><i><u id="quality-bar"></u></i></div></div><div class="insights"><article><h3>Strong alignment</h3><div id="matching" class="tags"></div></article><article><h3>Potential gaps</h3><div id="missing" class="tags coral"></div></article><article><h3>Resume checks</h3><ul id="checks"></ul></article></div><div class="suggestions"><div class="eyebrow">NEXT BEST MOVES</div><div id="suggestion-list"></div></div><p id="disclaimer" class="result-disclaimer"></p></template>
+    <script src="app.js"></script>
+  </body>
+</html>
